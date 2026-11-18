@@ -1,0 +1,3 @@
+# Raw and processed Spotify data contain personal information - never commit
+data/
+__pycache__/
