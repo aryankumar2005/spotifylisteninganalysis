@@ -57,7 +57,7 @@ When I compared Spotify's `skipped` column with plays that ended with the forwar
 | 2022 | 7% |
 | 2023 onwards | 100% |
 
-Spotify just didn't record skips before 2023, so "False" in the older data means the information is missing, not that I didn't skip. Because of this, I only used plays from 2023 onwards (140,346 plays) for the skip analysis, and left out zero-length plays.
+Spotify hardly recorded skips before 2023 (only 7% of forward-button plays in 2022), so "False" in the older data means the information is missing, not that I didn't skip. Because of this, I only used plays from 2023 onwards (140,346 plays) for the skip analysis, and left out zero-length plays.
 
 ## Results
 
@@ -71,4 +71,5 @@ Spotify just didn't record skips before 2023, so "False" in the older data means
 ## Limitations
 
 - The skip rate includes short plays, because most skips happen in the first 30 seconds. The listening totals only count plays over 30 seconds, the same rule Spotify uses for counting a stream.
+- Usual taste is my top 50 artists by listening time, which is partly circular, because artists I skip less build up more listening time. A better test would pick my usual artists from earlier years and then measure how often I skip them afterwards.
 - The skip results only cover 2023 onwards.
