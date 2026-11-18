@@ -21,7 +21,7 @@ print('Different artists:', listens['artist'].nunique())
 print('Different songs:', listens['track_name'].nunique())
 
 
-# ---------- Top artists and tracks ----------
+# Top artists and tracks
 
 # add up the listening time for each artist (like a pivot table in Excel)
 artist_time = listens.groupby('artist')['ms_played'].sum()
@@ -38,10 +38,10 @@ print('\nTop 20 tracks (plays):')
 print(top_tracks)
 
 
-# ---------- Skip analysis ----------
+# Skip analysis
 
 # I found that Spotify didn't record the 'skipped' column properly before 2023
-# (it always said False, even when I pressed the forward button),
+# (it almost always said False, even when I pressed the forward button),
 # so I only use plays from 2023 onwards
 df['year'] = df['datetime'].dt.year
 skip_plays = df[df['year'] >= 2023]
@@ -74,7 +74,7 @@ print('\nMost skipped artists (at least 20 plays):')
 print(most_skipped.round(2))
 
 
-# ---------- Do I skip artists outside my usual taste more? ----------
+# Do I skip artists outside my usual taste more?
 
 # my 'usual taste' = my top 50 artists by total listening time
 top_50_artists = artist_hours.sort_values(ascending=False).head(50).index
